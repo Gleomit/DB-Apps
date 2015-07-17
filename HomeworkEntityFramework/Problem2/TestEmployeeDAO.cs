@@ -1,5 +1,4 @@
 ﻿using System;
-using Problem1;
 
 namespace Problem2
 {
