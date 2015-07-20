@@ -48,6 +48,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Migrations\201507201638222_AddLicenseClass.cs" />
+    <Compile Include="Migrations\201507201638222_AddLicenseClass.Designer.cs">
+      <DependentUpon>201507201638222_AddLicenseClass.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StudentSystemModel.cs" />
@@ -61,6 +65,11 @@
       <Project>{8783589c-dced-4e34-b223-3d189365f516}</Project>
       <Name>StudentSystem.Models</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201507201638222_AddLicenseClass.resx">
+      <DependentUpon>201507201638222_AddLicenseClass.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
