@@ -46,9 +46,9 @@ namespace Problem4
         {
             using (var context = new SoftUniEntities())
             {
-                var employeesFirstNames = (from employee in context.Employees
+                var employeesFirstNames = from employee in context.Employees
                     where employee.Projects.Any(p => p.StartDate.Year == 2002)
-                    select employee.FirstName).ToList();
+                    select employee.FirstName;
 
                 foreach (var employee in employeesFirstNames)
                 {

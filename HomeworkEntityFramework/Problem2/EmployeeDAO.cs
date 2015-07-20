@@ -1,4 +1,5 @@
 ﻿using System.Data.Entity;
+using System.Linq;
 using Problem1;
 
 namespace Problem2
@@ -26,14 +27,20 @@ namespace Problem2
         {
             using (var context = new SoftUniEntities())
             {
-                Employee empl = context.Employees.Find(employee.EmployeeID);
+                Employee empl = context.Employees.SingleOrDefault(e => e.EmployeeID == employee.EmployeeID);
 
                 if (empl != null)
                 {
-                    empl = employee;
+                    empl.FirstName = employee.FirstName;
+                    empl.LastName = employee.LastName;
+                    empl.MiddleName = employee.MiddleName;
+                    empl.AddressID = employee.AddressID;
+                    empl.ManagerID = employee.ManagerID;
+                    empl.DepartmentID = employee.DepartmentID;
+                    empl.JobTitle = employee.JobTitle;
+                    empl.Salary = employee.Salary;
+                    empl.HireDate = employee.HireDate;
                 }
-
-                context.Entry(empl).State = EntityState.Modified;
 
                 context.SaveChanges();
             }
@@ -43,9 +50,18 @@ namespace Problem2
         {
             using (var context = new SoftUniEntities())
             {
-                context.Employees.Remove(employee);
+                Employee empl = context.Employees.Find(employee.EmployeeID);
+                context.Employees.Remove(empl);
                 context.SaveChanges();
             }
+        }
+
+        public static Employee LastEmployee()
+        {
+            using (var context = new SoftUniEntities())
+            {
+                return context.Employees.OrderByDescending(e => e.EmployeeID).First();
+            } 
         }
     }
 }

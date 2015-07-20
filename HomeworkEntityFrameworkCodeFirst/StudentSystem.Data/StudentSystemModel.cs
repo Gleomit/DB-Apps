@@ -1,3 +1,4 @@
+using StudentSystem.Data.Migrations;
 using StudentSystem.Models;
 
 namespace StudentSystem.Data
@@ -17,6 +18,7 @@ namespace StudentSystem.Data
         public StudentSystemModel()
             : base("name=StudentSystemModel")
         {
+            Database.SetInitializer(new MigrateDatabaseToLatestVersion<StudentSystemModel, Configuration>());
         }
 
         public virtual DbSet<Student> Students { get; set; }
