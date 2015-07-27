@@ -1,0 +1,10 @@
+﻿<Window x:Class="Problem3.ErrorWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="ErrorWindow" Height="300" Width="300">
+    <Grid>
+        <Label Content="Error" HorizontalAlignment="Left" HorizontalContentAlignment="Center" FontSize="48" Background="#FFFFF3CF" VerticalAlignment="Top" RenderTransformOrigin="-1.002,0.491" Width="292" Height="70"/>
+        <Label Content="Update conflict. Please reload." FontSize="24" Background="#FFFFF3CF" HorizontalAlignment="Left" Margin="37,90,0,0" VerticalAlignment="Top" Width="223" Height="73"/>
+        <Button x:Name="ErrorOK" Content="OK" HorizontalAlignment="Left" Margin="85,187,0,0" FontSize="24" FontWeight="Bold" Background="#FFF" BorderThickness="3" BorderBrush="#FFEE8336" VerticalAlignment="Top" Width="129" Height="51" Click="ErrorOK_Click"/>
+    </Grid>
+</Window>

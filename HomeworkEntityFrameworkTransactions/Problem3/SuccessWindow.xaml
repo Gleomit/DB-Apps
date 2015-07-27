@@ -1,0 +1,11 @@
+﻿<Window x:Class="Problem3.SuccessWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="SuccessWindow" Height="300" Width="300">
+    <Grid>
+        <Label Content="Success" HorizontalAlignment="Left" FontSize="48" VerticalAlignment="Top" RenderTransformOrigin="-1.002,0.491" Width="292" Height="73" Background="#FFFFF3CF" HorizontalContentAlignment="Center"/>
+        <Label Content="News saved in DB." HorizontalAlignment="Left" Margin="37,111,0,0" VerticalAlignment="Top" FontSize="24" Background="#FFFFF3CF" Width="223" Height="73"/>
+        <Button x:Name="SuccessOK" FontSize="28" FontWeight="Bold" Background="#FFF" BorderBrush="#FFEE8336" BorderThickness="3" Content="OK" HorizontalAlignment="Left" Margin="84,208,0,0" VerticalAlignment="Top" Width="129" Height="51" Click="SuccessOK_Click"/>
+
+    </Grid>
+</Window>
