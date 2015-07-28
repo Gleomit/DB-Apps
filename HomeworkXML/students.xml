@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="students.xslt"?>
+<students>
+  <student>
+    <name>name1</name>
+    <gender>gender1</gender>
+    <birthDate>1900-01-01</birthDate>
+    <phoneNumber>phoneNumber1</phoneNumber>
+    <email>email1</email>
+    <university>university1</university>
+    <specialty>specialty1</specialty>
+    <facultyNumber>facultyNumber1</facultyNumber>
+    <exams>
+      <exam>
+        <examName>examName1</examName>
+        <dateTaken>1900-01-01</dateTaken>
+        <grade>grade1</grade>
+      </exam>
+    </exams>
+  </student>
+</students>
